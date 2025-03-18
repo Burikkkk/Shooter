@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ReactiveTarget : MonoBehaviour
 {
-    [SerializeField] private float hitForce;
     private EnemyAI _enemyAI;
 
     // Start is called before the first frame update
@@ -13,20 +12,26 @@ public class ReactiveTarget : MonoBehaviour
         _enemyAI = GetComponent<EnemyAI>();
     }
 
-    public void ReactToHit(Transform playerTransform, Vector3 hitPoint)
+    public void ReactToSmallHit()
+    {
+        _enemyAI.HitEnemy();
+    }
+
+    public void ReactToHit()
     {
         if (_enemyAI != null)
         {
+            _enemyAI.Die();
             Destroy(_enemyAI);
         }
 
-        StartCoroutine(DieCoroutine(3, playerTransform, hitPoint));
+        StartCoroutine(DieCoroutine(3.0f));
     }
 
-    private IEnumerator DieCoroutine(float waitSecond, Transform playerTransform, Vector3 hitPoint)
+    private IEnumerator DieCoroutine(float waitSecond)
     {
-        //transform.Rotate(-45, 0, 0);
-        GetComponent<Rigidbody>().AddForceAtPosition(hitForce * playerTransform.forward, hitPoint);
+
+        //anim
         yield return new WaitForSeconds(waitSecond);
 
         Destroy(this.transform.gameObject);
