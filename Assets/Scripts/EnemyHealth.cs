@@ -36,6 +36,10 @@ public class EnemyHealth : MonoBehaviour
         {
             Die();
         }
+        else
+        {
+            _reactiveTarget.ReactToSmallHit();
+        }
     }
 
     public void Die()

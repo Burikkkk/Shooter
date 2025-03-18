@@ -12,10 +12,16 @@ public class ReactiveTarget : MonoBehaviour
         _enemyAI = GetComponent<EnemyAI>();
     }
 
+    public void ReactToSmallHit()
+    {
+        _enemyAI.HitEnemy();
+    }
+
     public void ReactToHit()
     {
         if (_enemyAI != null)
         {
+            _enemyAI.Die();
             Destroy(_enemyAI);
         }
 

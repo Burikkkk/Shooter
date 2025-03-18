@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     private bool _walkingToPlayer = false;
     private bool _canShoot = true;
     private Transform playerTransform;
+    private Animator _animator;
 
     [SerializeField]
     private GameObject[] _fireballsPrefab;
@@ -26,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,7 +35,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (_alive)
         {
-
             if (_isAttacking || CheckIfPlayerSeen())
             {
                 _isAttacking = true;
@@ -71,14 +71,37 @@ public class EnemyAI : MonoBehaviour
         if (distance <= shootRange) // && cooldown)
         {
             _walkingToPlayer = false;
-            if(_canShoot)
-                Shoot();
+            if (_canShoot)
+            {
+                StartShootAnimation();
+            }
         }
         else
         {
             _walkingToPlayer = true;
         }
         
+    }
+
+    private void StartShootAnimation()
+    {
+        _animator.SetBool("Attacking", true);
+    }
+
+    public void HitEnemy()
+    {
+        _animator.SetBool("Hit", true);
+        _animator.SetBool("Attacking", false);
+    }
+
+    public void Die()
+    {
+        _animator.SetBool("Dead", true);
+    }
+    
+    public void UnsetAnimatorBool(string name)
+    {
+        _animator.SetBool(name, false);
     }
     
     private void Shoot()

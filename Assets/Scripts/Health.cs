@@ -40,7 +40,6 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("fucking die");
         GetComponent<MouseLook>().enabled = false;
         GetComponent<RayShooter>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
