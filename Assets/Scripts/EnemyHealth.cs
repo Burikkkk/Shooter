@@ -1,17 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float hp;
-    [SerializeField] private GameObject deathPanel;
+    private ReactiveTarget _reactiveTarget;
     private float maxHp;
 
     private void Start()
     {
         maxHp = hp;
+        _reactiveTarget = GetComponent<ReactiveTarget>();
     }
 
     public float Hp
@@ -40,13 +40,8 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("fucking die");
-        GetComponent<MouseLook>().enabled = false;
-        GetComponent<RayShooter>().enabled = false;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        deathPanel.SetActive(true);
-        Time.timeScale = 0;
+        GetComponent<Animator>().SetBool("Dead", true);
+        //GetComponent<Collider>().
+        _reactiveTarget.ReactToHit();
     }
-
 }

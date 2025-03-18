@@ -5,6 +5,7 @@ using UnityEngine;
 public class RayShooter : MonoBehaviour
 {
     [SerializeField] private int bulletsAmount;
+    [SerializeField] private float damage = 1.0f;
     private Camera _camera;
     // Start is called before the first frame update
     void Start()
@@ -13,7 +14,7 @@ public class RayShooter : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        
     }
 
     // Update is called once per frame
@@ -23,7 +24,6 @@ public class RayShooter : MonoBehaviour
         {
             Shoot();
         }
-
     }
 
     public int BulletsAmount
@@ -42,17 +42,16 @@ public class RayShooter : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             GameObject hitObject = hit.transform.gameObject;
-            
-            ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+            EnemyHealth health = hitObject.GetComponent<EnemyHealth>();
 
-            if (target != null)
+            if (health != null)
             {
-                target.ReactToHit(transform, hit.point);
+                health.Decrease(damage);
             }
             else
             {
                 StartCoroutine(SphereInicatorCoroutine(hit.point));
-                Debug.DrawLine(this.transform.position, hit.point, Color.green, 6);
+                //Debug.DrawLine(this.transform.position, hit.point, Color.green, 6);
             }
         }
     }
