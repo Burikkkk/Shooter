@@ -1,11 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FpsMovement : MonoBehaviour
 {
-    [SerializeField] private float _speed = 6.0f;
-    [SerializeField] private float _gravity = -9.8f;
+    [SerializeField] private float speed = 6.0f;
+    [SerializeField] private float speedBoost = 1.5f;
+    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float rayLength;
+    [SerializeField] private LayerMask groundLayer;
+    
 
     private Rigidbody _rb;
 
@@ -18,23 +24,58 @@ public class FpsMovement : MonoBehaviour
         }
         else
         {
-            _rb.freezeRotation = true; // Отключаем вращение, чтобы не было коллизий с физикой
+            _rb.freezeRotation = true; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         }
     }
 
     private void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            speed *= speedBoost;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            speed /= speedBoost;
+        }
+    }
+
+    private void FixedUpdate()
     {
         MovePlayer();
     }
 
     private void MovePlayer()
     {
-        float deltaX = Input.GetAxis("Horizontal") * _speed;
-        float deltaZ = Input.GetAxis("Vertical") * _speed;
+        float deltaX = Input.GetAxis("Horizontal") * speed;
+        float deltaZ = Input.GetAxis("Vertical") * speed;
 
         Vector3 moveDirection = transform.right * deltaX + transform.forward * deltaZ;
-        moveDirection.y = _rb.velocity.y; // Сохраняем существующую вертикальную скорость (гравитация)
+        moveDirection.y = _rb.velocity.y; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 
-        _rb.velocity = new Vector3(moveDirection.x, _rb.velocity.y + _gravity * Time.deltaTime, moveDirection.z);
+        _rb.velocity = new Vector3(moveDirection.x, _rb.velocity.y, moveDirection.z);
+    }
+
+    private void Jump()
+    {
+        if (CheckGrounded())
+        {
+            _rb.AddForce(jumpForce * transform.up);   
+        }
+        else
+        {
+            Debug.Log("Not grounded");
+        }
+    }
+    
+    private bool CheckGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector2.down, rayLength, groundLayer.value);
     }
 }

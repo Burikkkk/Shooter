@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _alive = true;
+
     }
 
     // Update is called once per frame
@@ -28,20 +28,16 @@ public class EnemyAI : MonoBehaviour
 
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
-
+            
+            
+            
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.transform.gameObject;
 
                 if (hitObject.GetComponent<CharacterController>()) //нужно поменять на тег
                 {
-                    if (_fireball == null)
-                    {
-                        int randFireball = Random.Range(1, _fireballsPrefab.Length);
-                        _fireball = Instantiate(_fireballsPrefab[randFireball]) as GameObject;
-                        _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
-                        _fireball.transform.rotation = transform.rotation;
-                    }
+                    Shoot();
                 }
                 else if (hit.distance < obstacleRande)
                 {
@@ -50,6 +46,22 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Shoot()
+    {
+        if (_fireball == null)
+        {
+            int randFireball = Random.Range(1, _fireballsPrefab.Length);
+            _fireball = Instantiate(_fireballsPrefab[randFireball]) as GameObject;
+            _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
+            _fireball.transform.rotation = transform.rotation;
+        }
+    }
+
+    private void CheckIfPlayerSeen()
+    {
+        
     }
 
     public void SetAlive(bool alive)

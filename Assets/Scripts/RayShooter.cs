@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RayShooter : MonoBehaviour
 {
+    [SerializeField] private int bulletsAmount;
     private Camera _camera;
     // Start is called before the first frame update
     void Start()
@@ -18,30 +19,42 @@ public class RayShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && bulletsAmount > 0)
         {
-            Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
-
-            Ray ray = _camera.ScreenPointToRay(screenCenter);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject hitObject = hit.transform.gameObject;
-                ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
-
-                if (target != null)
-                {
-                    target.ReactToHit();
-                }
-                else
-                {
-                    StartCoroutine(SphereInicatorCoroutine(hit.point));
-                    Debug.DrawLine(this.transform.position, hit.point, Color.green, 6);
-                }
-            }
+            Shoot();
         }
 
+    }
+
+    public int BulletsAmount
+    {
+        get { return bulletsAmount; }
+    }
+
+    private void Shoot()
+    {
+        Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+
+        Ray ray = _camera.ScreenPointToRay(screenCenter);
+        RaycastHit hit;
+        bulletsAmount--;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            GameObject hitObject = hit.transform.gameObject;
+            
+            ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+
+            if (target != null)
+            {
+                target.ReactToHit(transform, hit.point);
+            }
+            else
+            {
+                StartCoroutine(SphereInicatorCoroutine(hit.point));
+                Debug.DrawLine(this.transform.position, hit.point, Color.green, 6);
+            }
+        }
     }
     private void OnGUI()
     {
