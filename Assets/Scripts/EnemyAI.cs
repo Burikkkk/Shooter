@@ -13,9 +13,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private bool _alive = true;
 
-    private bool _isAttacking = false;
-    private bool _walkingToPlayer = false;
+    private bool _isAttacking;
+    private bool _walkingToPlayer;
     private bool _canShoot = true;
+    private bool _isHit;
     private Transform playerTransform;
     private Animator _animator;
 
@@ -64,7 +65,7 @@ public class EnemyAI : MonoBehaviour
 
         LookAtPlayer();
         
-        if (_walkingToPlayer)
+        if (_walkingToPlayer && !_isHit)
         {
             transform.Translate(0, 0, speed * Time.deltaTime);  // идем на игрока
         }
@@ -101,6 +102,7 @@ public class EnemyAI : MonoBehaviour
 
     public void HitEnemy()
     {
+        _isHit = true;
         _animator.SetBool("Hit", true);
         _animator.SetBool("Attacking", false);
     }
@@ -112,6 +114,14 @@ public class EnemyAI : MonoBehaviour
     
     public void UnsetAnimatorBool(string name)
     {
+        switch (name)
+        {
+            case "Hit":
+                _isHit = false;
+                break;
+            default:
+                break;
+        }
         _animator.SetBool(name, false);
     }
     
@@ -142,6 +152,9 @@ public class EnemyAI : MonoBehaviour
 
     private void Walk()
     {
+        if(_isHit)
+            return;
+        
         transform.Translate(0, 0, speed * Time.deltaTime);
         
         Ray ray = new Ray(transform.position, transform.forward);
