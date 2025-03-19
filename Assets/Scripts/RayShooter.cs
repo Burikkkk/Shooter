@@ -48,27 +48,8 @@ public class RayShooter : MonoBehaviour
             {
                 health.Decrease(damage);
             }
-            else
-            {
-                StartCoroutine(SphereInicatorCoroutine(hit.point));
-                //Debug.DrawLine(this.transform.position, hit.point, Color.green, 6);
-            }
+            
         }
     }
-    private void OnGUI()
-    {
-        int size = 50;
-        float posX = _camera.pixelWidth / 2 - size / 4;
-        float posY = _camera.pixelHeight / 2 - size / 2;
-        GUI.Label(new Rect(posX, posY, size, size), "+");
-    }
-
-    private IEnumerator SphereInicatorCoroutine(Vector3 pos)
-    {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.position = pos;
-
-        yield return new WaitForSeconds(6);
-        Destroy(sphere);
-    }
+   
 }

@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float hp;
     [SerializeField] private GameObject deathPanel;
     private float maxHp;
+    
 
     private void Start()
     {
@@ -48,4 +49,9 @@ public class Health : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("WaterCollider"))
+            Die();
+    }
 }
