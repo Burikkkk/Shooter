@@ -61,14 +61,16 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        transform.LookAt(playerTransform, transform.up);  // смотрим на игрока
+
+        LookAtPlayer();
+        
         if (_walkingToPlayer)
         {
             transform.Translate(0, 0, speed * Time.deltaTime);  // идем на игрока
         }
 
         var distance = (transform.position - playerTransform.position).magnitude;
-        if (distance <= shootRange) // && cooldown)
+        if (distance <= shootRange)
         {
             _walkingToPlayer = false;
             if (_canShoot)
@@ -81,6 +83,15 @@ public class EnemyAI : MonoBehaviour
             _walkingToPlayer = true;
         }
         
+    }
+
+    private void LookAtPlayer()
+    {
+        transform.LookAt(playerTransform, transform.up);  // смотрим на игрока (но только по горизонтали)
+        var rotation = transform.eulerAngles;
+        rotation.x = 0.0f;
+        rotation.z = 0.0f;
+        transform.eulerAngles = rotation;
     }
 
     private void StartShootAnimation()
