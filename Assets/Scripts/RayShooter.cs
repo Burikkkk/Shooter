@@ -55,13 +55,13 @@ public class RayShooter : MonoBehaviour
             }
         }
     }
-    //private void OnGUI()
-    //{
-    //    int size = 20;
-    //    float posX = _camera.pixelWidth / 2 - size / 4;
-    //    float posY = _camera.pixelHeight / 2 - size / 2;
-    //    GUI.Label(new Rect(posX, posY, size, size), "+");
-    //}
+    private void OnGUI()
+    {
+        int size = 50;
+        float posX = _camera.pixelWidth / 2 - size / 4;
+        float posY = _camera.pixelHeight / 2 - size / 2;
+        GUI.Label(new Rect(posX, posY, size, size), "+");
+    }
 
     private IEnumerator SphereInicatorCoroutine(Vector3 pos)
     {
