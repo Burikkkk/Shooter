@@ -34,8 +34,16 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public static void LoadNextLevel()
+    public void Win()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(2);
     }
+
+    public void Lose()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(3);
+    }
+
 }
