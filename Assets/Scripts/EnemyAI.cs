@@ -156,12 +156,16 @@ public class EnemyAI : MonoBehaviour
             return;
         
         transform.Translate(0, 0, speed * Time.deltaTime);
+
+        var rayPosition = transform.position;
+        rayPosition.y += 1.5f;
         
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(rayPosition, transform.forward);
         RaycastHit hit;
             
         if (Physics.Raycast(ray, out hit))
-        { 
+        {
+           
             if (hit.distance < obstacleRande)
             {
                 float angleRotation = Random.Range(-100, 100);

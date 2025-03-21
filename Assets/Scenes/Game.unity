@@ -49353,6 +49353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6033926284874683784, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
+      propertyPath: obstacleRande
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7618505438150437488, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.535
