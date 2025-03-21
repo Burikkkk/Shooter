@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private float hp;
-    [SerializeField] private GameObject deathPanel;
     private float maxHp;
     
 
@@ -45,8 +45,14 @@ public class Health : MonoBehaviour
         GetComponent<RayShooter>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        deathPanel.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(3);
+    }
+
+    public void Win()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(2);
     }
 
     private void OnCollisionEnter(Collision collision)
