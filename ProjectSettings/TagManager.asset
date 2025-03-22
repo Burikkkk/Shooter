@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - WaterCollider
+  - Pirate
+  - Skeleton
   layers:
   - Default
   - TransparentFX
