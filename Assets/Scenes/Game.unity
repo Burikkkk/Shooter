@@ -7260,7 +7260,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 216.55247, y: 1, z: 216.2848}
+  m_Size: {x: 216.55247, y: 0.18, z: 216.2848}
   m_Center: {x: -1.911583, y: 0, z: -1.8841782}
 --- !u!4 &476063969
 Transform:
@@ -49441,6 +49441,10 @@ PrefabInstance:
     - target: {fileID: 1341095354923403219, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
       propertyPath: m_Name
       value: Pirate_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033926284874683784, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
+      propertyPath: viewRadius
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7618505438150437488, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
       propertyPath: m_LocalPosition.x

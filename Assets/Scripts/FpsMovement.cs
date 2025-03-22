@@ -86,6 +86,8 @@ public class FpsMovement : MonoBehaviour
     
     private bool CheckGrounded()
     {
-        return Physics.Raycast(transform.position, Vector2.down, rayLength, groundLayer.value);
+        var rayPosition = transform.position;
+        rayPosition.y += 1.5f;
+        return Physics.Raycast(rayPosition, Vector3.down, rayLength, groundLayer.value);
     }
 }
