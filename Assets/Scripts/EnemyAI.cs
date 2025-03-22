@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float shootRange = 7.0f;
     [SerializeField] private float shootCooldown = 2.0f;
     [SerializeField] private float damage;
+    [SerializeField] private ParticleSystem shotSystem;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private bool _alive = true;
 
@@ -129,6 +130,7 @@ public class EnemyAI : MonoBehaviour
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
+        shotSystem.Play();
         StartCoroutine(StartShootCooldown());
         if (Physics.Raycast(ray, out hit))
         {

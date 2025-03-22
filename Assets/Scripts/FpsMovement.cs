@@ -11,6 +11,7 @@ public class FpsMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float rayLength;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Animator animator;
     
 
     private Rigidbody _rb;
@@ -55,6 +56,15 @@ public class FpsMovement : MonoBehaviour
     {
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
+
+        if (deltaX != 0 || deltaZ != 0)
+        {
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
 
         Vector3 moveDirection = transform.right * deltaX + transform.forward * deltaZ;
         moveDirection.y = _rb.velocity.y; // ��������� ������������ ������������ �������� (����������)

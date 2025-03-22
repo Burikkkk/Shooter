@@ -6,6 +6,7 @@ public class RayShooter : MonoBehaviour
 {
     [SerializeField] private int bulletsAmount;
     [SerializeField] private float damage = 1.0f;
+    [SerializeField] private ParticleSystem shotSystem;
     private Camera _camera;
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class RayShooter : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(screenCenter);
         RaycastHit hit;
         bulletsAmount--;
+        shotSystem.Play();
 
         if (Physics.Raycast(ray, out hit))
         {
