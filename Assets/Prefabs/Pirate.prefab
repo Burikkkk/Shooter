@@ -7483,12 +7483,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  obstacleRande: 5
-  viewRadius: 7
+  obstacleRande: 10
+  viewRadius: 8
   shootRange: 5
   shootCooldown: 2
   damage: 3
-  shotSystem: {fileID: 7165826936798928603, guid: 21369efc0e475ac4ebfdb5ede3d9cc88, type: 3}
+  shotSystem: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -7568,7 +7568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8359212213280516283
 Transform:
   m_ObjectHideFlags: 0
