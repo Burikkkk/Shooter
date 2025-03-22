@@ -29648,6 +29648,10 @@ MonoBehaviour:
   bulletsAmount: 30
   damage: 1
   shotSystem: {fileID: 890355103}
+  skeletonsText: {fileID: 408142528}
+  piratesText: {fileID: 149098265}
+  skeletonsAmount: 3
+  piratesAmount: 3
 --- !u!114 &1461709160
 MonoBehaviour:
   m_ObjectHideFlags: 0

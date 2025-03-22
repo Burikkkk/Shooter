@@ -8,6 +8,7 @@ public class RayShooter : MonoBehaviour
 {
     [SerializeField] private int bulletsAmount;
     [SerializeField] private float damage = 1.0f;
+    [SerializeField] private ParticleSystem shotSystem;
     [SerializeField] private TMP_Text skeletonsText;
     [SerializeField] private TMP_Text piratesText;
     [SerializeField] private int skeletonsAmount;
