@@ -3016,7 +3016,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec9d28bfc6bfb8e46a21a03f2ec882a0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d31fd3490f78be14986be1862a333433, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -28732,7 +28732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsAmount: 30
   damage: 1
-  shotSystem: {fileID: 1577580973}
+  shotSystem: {fileID: 7165826936798928603, guid: 1b9595359becf1845b2fca39d080a61a, type: 3}
   skeletonsText: {fileID: 408142528}
   piratesText: {fileID: 149098265}
   skeletonsAmount: 12
@@ -30035,11 +30035,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b9595359becf1845b2fca39d080a61a, type: 3}
---- !u!198 &1577580973 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7165826936798928603, guid: 1b9595359becf1845b2fca39d080a61a, type: 3}
-  m_PrefabInstance: {fileID: 1577580972}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1577580974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6555365700417243165, guid: 1b9595359becf1845b2fca39d080a61a, type: 3}
@@ -49369,6 +49364,10 @@ PrefabInstance:
     - target: {fileID: 1341095354923403219, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
       propertyPath: m_Name
       value: Pirate_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033926284874683784, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
+      propertyPath: shootRange
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6033926284874683784, guid: a5a9ec792f4f3594ead61e32af54d161, type: 3}
       propertyPath: obstacleRande
