@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1.0f;
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadScene(3);
     }
 
    

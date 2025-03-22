@@ -906,7 +906,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -2453,7 +2453,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -2474,7 +2474,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -2495,7 +2495,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -2538,7 +2538,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -2562,7 +2562,7 @@ BoxCollider:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 247
+    m_Bits: 759
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -2580,7 +2580,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -4482,7 +4482,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -5680,7 +5680,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -7984,7 +7984,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -29786,7 +29786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   speedBoost: 1.2
-  jumpForce: 333
+  jumpForce: 300
   rayLength: 2
   groundLayer:
     serializedVersion: 2
@@ -30218,7 +30218,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -41379,7 +41379,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128

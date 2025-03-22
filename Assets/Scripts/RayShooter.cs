@@ -38,14 +38,14 @@ public class RayShooter : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 1.0f;
-            SceneManager.LoadSceneAsync(2);
+            SceneManager.LoadScene(2);
         }
         if(bulletsAmount==0 && EnemiesCounter.CheckWin() == false)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 1.0f;
-            SceneManager.LoadSceneAsync(3);
+            SceneManager.LoadScene(3);
         }
 
     }
