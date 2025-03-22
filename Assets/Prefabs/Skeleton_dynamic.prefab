@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 6222250069668200295}
   m_Layer: 8
   m_Name: Skeleton_dynamic
-  m_TagString: Untagged
+  m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

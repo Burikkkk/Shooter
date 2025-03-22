@@ -44,8 +44,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<Animator>().SetBool("Dead", true);
-        //GetComponent<Collider>().
+        //GetComponent<Animator>().SetBool("Dead", true);
         _reactiveTarget.ReactToHit();
+
     }
 }

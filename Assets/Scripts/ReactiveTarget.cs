@@ -6,7 +6,7 @@ public class ReactiveTarget : MonoBehaviour
 {
     private EnemyAI _enemyAI;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         _enemyAI = GetComponent<EnemyAI>();

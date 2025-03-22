@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private bool _alive = true;
 
+
     private bool _isAttacking;
     private bool _walkingToPlayer;
     private bool _canShoot = true;
@@ -25,13 +26,13 @@ public class EnemyAI : MonoBehaviour
     private GameObject _fireball;
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (_alive)
@@ -110,8 +111,9 @@ public class EnemyAI : MonoBehaviour
     public void Die()
     {
         _animator.SetBool("Dead", true);
+        EnemiesCounter.DecreaseEnemy(gameObject.tag);
     }
-    
+
     public void UnsetAnimatorBool(string name)
     {
         switch (name)

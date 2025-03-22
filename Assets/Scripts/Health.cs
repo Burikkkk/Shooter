@@ -49,11 +49,7 @@ public class Health : MonoBehaviour
         SceneManager.LoadSceneAsync(3);
     }
 
-    public void Win()
-    {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadSceneAsync(2);
-    }
+   
 
     private void OnCollisionEnter(Collision collision)
     {

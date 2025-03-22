@@ -2055,9 +2055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10
-
-'
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2751,9 +2749,8 @@ GameObject:
   - component: {fileID: 203290423}
   - component: {fileID: 203290426}
   - component: {fileID: 203290425}
-  - component: {fileID: 203290424}
   m_Layer: 5
-  m_Name: SceletonsCounter
+  m_Name: SkeletonsCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2780,20 +2777,6 @@ RectTransform:
   m_AnchoredPosition: {x: 472.6, y: -413.09998}
   m_SizeDelta: {x: -1641.4714, y: -985.2148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &203290424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203290422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f6cd520fc3409408ce3215c22b4367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shooter: {fileID: 1461709159}
-  counterText: {fileID: 408142528}
 --- !u!114 &203290425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,8 +2898,8 @@ GameObject:
   - component: {fileID: 216437242}
   - component: {fileID: 216437241}
   - component: {fileID: 216437240}
-  - component: {fileID: 216437244}
   - component: {fileID: 216437245}
+  - component: {fileID: 216437244}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3196,7 +3179,6 @@ GameObject:
   - component: {fileID: 237206152}
   - component: {fileID: 237206155}
   - component: {fileID: 237206154}
-  - component: {fileID: 237206153}
   m_Layer: 5
   m_Name: PiratesCounter
   m_TagString: Untagged
@@ -3225,20 +3207,6 @@ RectTransform:
   m_AnchoredPosition: {x: 299.9, y: -413.1}
   m_SizeDelta: {x: -1641.4714, y: -985.2148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &237206153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237206151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f6cd520fc3409408ce3215c22b4367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shooter: {fileID: 1461709159}
-  counterText: {fileID: 149098265}
 --- !u!114 &237206154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6363,9 +6331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10
-
-'
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19420,7 +19386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28766,6 +28732,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsAmount: 30
   damage: 1
+  skeletonsText: {fileID: 408142528}
+  piratesText: {fileID: 149098265}
+  skeletonsAmount: 12
+  piratesAmount: 2
 --- !u!114 &1461709160
 MonoBehaviour:
   m_ObjectHideFlags: 0
