@@ -42456,7 +42456,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2398374308574119344}
-  - component: {fileID: 4566390222381611331}
   m_Layer: 7
   m_Name: pelvis
   m_TagString: Untagged
@@ -43572,7 +43571,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6505655172545214434}
-  - component: {fileID: 4566390222385749825}
   m_Layer: 7
   m_Name: calf_l
   m_TagString: Untagged
@@ -43893,7 +43891,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 318917720124237982}
-  - component: {fileID: 4566390223809851103}
   m_Layer: 7
   m_Name: thigh_r
   m_TagString: Untagged
@@ -44057,7 +44054,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669946852728920443}
-  - component: {fileID: 4566390222835565479}
   m_Layer: 7
   m_Name: thigh_l
   m_TagString: Untagged
@@ -44155,7 +44151,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 969398957313123693}
-  - component: {fileID: 4566390222782531954}
   m_Layer: 7
   m_Name: calf_r
   m_TagString: Untagged
@@ -44560,98 +44555,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 136146867680183398}
   m_LocalEulerAnglesHint: {x: 0.008802778, y: 0.0042244233, z: 91.8836}
---- !u!136 &4566390222381611331
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327719819668947821}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.17
-  m_Height: 0.4
-  m_Direction: 2
-  m_Center: {x: -0.02, y: 0.01, z: 0}
---- !u!136 &4566390222385749825
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176310613483277272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.13
-  m_Height: 0.52
-  m_Direction: 0
-  m_Center: {x: 0.2, y: 0.02, z: 0}
---- !u!136 &4566390222782531954
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3735468111882919066}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.13
-  m_Height: 0.52
-  m_Direction: 0
-  m_Center: {x: -0.2, y: -0.02, z: 0}
---- !u!136 &4566390222835565479
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3445406130943871288}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.14
-  m_Height: 0.56
-  m_Direction: 0
-  m_Center: {x: 0.2, y: -0.01, z: 0.01}
 --- !u!95 &4566390223455010704
 Animator:
   serializedVersion: 5
@@ -49324,11 +49227,11 @@ Cloth:
   - maxDistance: 0.4
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders:
-  - {fileID: 4566390222385749825}
-  - {fileID: 4566390222782531954}
-  - {fileID: 4566390222381611331}
-  - {fileID: 4566390222835565479}
-  - {fileID: 4566390223809851103}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_SphereColliders: []
   m_SelfCollisionDistance: 0
   m_SelfCollisionStiffness: 0.2
@@ -49338,29 +49241,6 @@ Cloth:
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
   - {x: 0.5, y: 0.5, z: 0}
   m_VirtualParticleIndices: 
---- !u!136 &4566390223809851103
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3055885292058265789}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.14
-  m_Height: 0.56
-  m_Direction: 0
-  m_Center: {x: -0.2, y: 0.01, z: -0.01}
 --- !u!1 &4594915668899417321
 GameObject:
   m_ObjectHideFlags: 0
