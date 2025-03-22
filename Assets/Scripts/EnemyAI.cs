@@ -130,7 +130,9 @@ public class EnemyAI : MonoBehaviour
     
     private void Shoot()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        var rayPosition = transform.position;
+        rayPosition.y += 1.5f;
+        Ray ray = new Ray(rayPosition, transform.forward);
         RaycastHit hit;
         shotSystem.Play();
         StartCoroutine(StartShootCooldown());
