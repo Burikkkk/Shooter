@@ -720,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   obstacleRande: 1
-  viewRadius: 8
+  viewRadius: 4
   shootRange: 4
   shootCooldown: 2
   damage: 3

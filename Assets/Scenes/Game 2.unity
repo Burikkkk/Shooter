@@ -53782,6 +53782,10 @@ PrefabInstance:
       value: -178.06497
       objectReference: {fileID: 0}
     - target: {fileID: 1288110188122317218, guid: aa12bcbe1415b0c4ca13a4864ce382a2, type: 3}
+      propertyPath: shotSystem
+      value: 
+      objectReference: {fileID: 7165826936798928603, guid: 21369efc0e475ac4ebfdb5ede3d9cc88, type: 3}
+    - target: {fileID: 1288110188122317218, guid: aa12bcbe1415b0c4ca13a4864ce382a2, type: 3}
       propertyPath: viewRadius
       value: 8
       objectReference: {fileID: 0}
@@ -53951,7 +53955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240560762501373964, guid: aa12bcbe1415b0c4ca13a4864ce382a2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4451680313918177194, guid: aa12bcbe1415b0c4ca13a4864ce382a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54250,7 +54254,8 @@ PrefabInstance:
       value: -54.724884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 707736827827327713, guid: aa12bcbe1415b0c4ca13a4864ce382a2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa12bcbe1415b0c4ca13a4864ce382a2, type: 3}
