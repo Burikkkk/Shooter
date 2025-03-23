@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private ParticleSystem shotSystem;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private bool _alive = true;
-
+    [SerializeField] private LayerMask wallsCollidersLayer;
     [SerializeField] private AudioClip shotSound; 
     private AudioSource audioSource;
 
@@ -135,7 +135,10 @@ public class EnemyAI : MonoBehaviour
         shotSystem.Play();
         audioSource.PlayOneShot(shotSound);
         StartCoroutine(StartShootCooldown());
-        if (Physics.Raycast(ray, out hit))
+        
+        var includedLayers = ~wallsCollidersLayer;
+        
+        if (Physics.Raycast(ray, out hit, 1000f, includedLayers))
         {
             GameObject hitObject = hit.transform.gameObject;
             if (hitObject.transform == playerTransform)

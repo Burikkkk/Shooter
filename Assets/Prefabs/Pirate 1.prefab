@@ -7494,6 +7494,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _alive: 1
+  wallsCollidersLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   shotSound: {fileID: 8300000, guid: b8dfafc2d4a94554096f22c561022a78, type: 3}
 --- !u!114 &2569318852143121998
 MonoBehaviour:

@@ -13,7 +13,7 @@ public class RayShooter : MonoBehaviour
     [SerializeField] private TMP_Text piratesText;
     [SerializeField] private int skeletonsAmount;
     [SerializeField] private int piratesAmount;
-
+    [SerializeField] private LayerMask wallsCollidersLayer;
     [SerializeField] private AudioClip shotSound;
     private AudioSource audioSource;
 
@@ -69,9 +69,13 @@ public class RayShooter : MonoBehaviour
         bulletsAmount--;
         shotSystem.Play();
         audioSource.PlayOneShot(shotSound);
-        if (Physics.Raycast(ray, out hit))
+
+        var includedLayers = ~wallsCollidersLayer;
+        
+        if (Physics.Raycast(ray, out hit, 1000f, includedLayers))
         {
             GameObject hitObject = hit.transform.gameObject;
+            Debug.Log(hitObject.name);
             EnemyHealth health = hitObject.GetComponent<EnemyHealth>();
 
             if (health != null)

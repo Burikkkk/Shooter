@@ -874,7 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 63794467}
   - component: {fileID: 63794468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2436,7 +2436,7 @@ GameObject:
   - component: {fileID: 191511856}
   - component: {fileID: 191511855}
   - component: {fileID: 191511857}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls' colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4455,7 +4455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297674899}
   - component: {fileID: 297674900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5653,7 +5653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 363210193}
   - component: {fileID: 363210194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7239,7 +7239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476063969}
   - component: {fileID: 476063968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Water collider
   m_TagString: WaterCollider
   m_Icon: {fileID: 0}
@@ -7957,7 +7957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511085397}
   - component: {fileID: 511085398}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8613,7 +8613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561452197}
   - component: {fileID: 561452198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8809,7 +8809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589100778}
   - component: {fileID: 589100779}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13428,7 +13428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707311622}
   - component: {fileID: 707311623}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18753,7 +18753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 987173915}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Second floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29184,7 +29184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431015136}
   - component: {fileID: 1431015137}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29768,6 +29768,9 @@ MonoBehaviour:
   piratesText: {fileID: 149098265}
   skeletonsAmount: 12
   piratesAmount: 2
+  wallsCollidersLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   shotSound: {fileID: 8300000, guid: b8dfafc2d4a94554096f22c561022a78, type: 3}
 --- !u!114 &1461709160
 MonoBehaviour:
@@ -30279,7 +30282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514207241}
   - component: {fileID: 1514207242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34410,7 +34413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734734938}
   - component: {fileID: 1734734939}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41435,7 +41438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2121058993}
   - component: {fileID: 2121058994}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
