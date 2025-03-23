@@ -14,6 +14,9 @@ public class RayShooter : MonoBehaviour
     [SerializeField] private int skeletonsAmount;
     [SerializeField] private int piratesAmount;
 
+    [SerializeField] private AudioClip shotSound;
+    private AudioSource audioSource;
+
     private Camera _camera;
 
     void Start()
@@ -23,7 +26,8 @@ public class RayShooter : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
+        audioSource = GetComponent<AudioSource>();
+
     }
 
 
@@ -64,7 +68,7 @@ public class RayShooter : MonoBehaviour
         RaycastHit hit;
         bulletsAmount--;
         shotSystem.Play();
-
+        audioSource.PlayOneShot(shotSound);
         if (Physics.Raycast(ray, out hit))
         {
             GameObject hitObject = hit.transform.gameObject;

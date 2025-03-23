@@ -7370,6 +7370,7 @@ GameObject:
   - component: {fileID: 1288110188122317218}
   - component: {fileID: 2569318852143121998}
   - component: {fileID: 796089666751786279}
+  - component: {fileID: 7327198482799349685}
   m_Layer: 0
   m_Name: Pirate 1
   m_TagString: Pirate
@@ -7385,7 +7386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4240560762501373964}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.834178, y: 4.523495, z: 38.34}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.3}
   m_ConstrainProportionsScale: 0
@@ -7483,17 +7484,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  obstacleRande: 5
-  viewRadius: 5
-  shootRange: 2
+  obstacleRande: 3
+  viewRadius: 8
+  shootRange: 5
   shootCooldown: 2
   damage: 3
-  shotSystem: {fileID: 7165826936798928603, guid: 21369efc0e475ac4ebfdb5ede3d9cc88, type: 3}
+  shotSystem: {fileID: 1179015587139690904}
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
   _alive: 1
-  _fireballsPrefab: []
+  shotSound: {fileID: 8300000, guid: b8dfafc2d4a94554096f22c561022a78, type: 3}
 --- !u!114 &2569318852143121998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7519,6 +7520,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+--- !u!82 &7327198482799349685
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240560762501373964}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4286929344493354511
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,6 +9822,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21369efc0e475ac4ebfdb5ede3d9cc88, type: 3}
+--- !u!198 &1179015587139690904 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7165826936798928603, guid: 21369efc0e475ac4ebfdb5ede3d9cc88, type: 3}
+  m_PrefabInstance: {fileID: 8299735866860863299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3015093513351673694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6555365700417243165, guid: 21369efc0e475ac4ebfdb5ede3d9cc88, type: 3}

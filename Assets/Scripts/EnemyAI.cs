@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private bool _alive = true;
 
+    [SerializeField] private AudioClip shotSound; 
+    private AudioSource audioSource;
 
     private bool _isAttacking;
     private bool _walkingToPlayer;
@@ -22,15 +24,11 @@ public class EnemyAI : MonoBehaviour
     private Transform playerTransform;
     private Animator _animator;
 
-    [SerializeField]
-    private GameObject[] _fireballsPrefab;
-    private GameObject _fireball;
-
-
     
     void Start()
     {
         _animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     
@@ -135,6 +133,7 @@ public class EnemyAI : MonoBehaviour
         Ray ray = new Ray(rayPosition, transform.forward);
         RaycastHit hit;
         shotSystem.Play();
+        audioSource.PlayOneShot(shotSound);
         StartCoroutine(StartShootCooldown());
         if (Physics.Raycast(ray, out hit))
         {
